@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>AJAYS Navigation</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/nav_style.css" />
+
+
+</head>
+<body>
+<!-- navigation section -->
+
+
+<nav class="nav-section" id="nav">
+  <label for="toggleMainNav" class="hamburger-menu"></label>
+  <input type="checkbox" id="toggleMainNav" class="check-toggle" />
+  <label for="toggleMainNav" class="menu-overlay"></label>
+  <div class="main-nav-holder">
+    <ul class="main-nav">
+      <li class="close-nav"><label for="toggleMainNav"></label></li>
+      <li><a href="index.html#home" onclick="toggleMenuOpacity()"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="index.html#solutions" onclick="toggleMenuOpacity()"><i class="fa fa-thumbs-o-up"></i> Solutions</a></li>
+      <li><a href="index.html#services" onclick="toggleMenuOpacity()"><i class="fa fa-cogs"></i> Services</a></li>
+      <li><a href="index.html#work" onclick="toggleMenuOpacity()"><i class="fa fa-wrench"></i> Our Work</a></li>
+      <li><a href="pricing.html"><i class="fa fa-dollar"></i> Pricing</a></li>
+      <li><a href="index.html#about" onclick="toggleMenuOpacity()"><i class="far fa-smile-wink"></i> About</a></li>
+      <li><a href="testimonials.html"><i class="fa fa-bullhorn"></i> Tributes</a></li>
+      <li><a href="instant_photo.html"><i class="fa fa-cubes"></i> Animations</a></li>
+      <li><a href="index.html#contact_form" onclick="toggleMenuOpacity()"><i class="fa fa-paper-plane"></i> Contact</a></li>
+    </ul>
+  </div>
+  <div class="phone-ring">
+    <ul class="right-nav">
+      <li><a href="tel:0432798359"><i class="fa fa-phone"></i> 0432 798359</a><input class="check-toggle" /></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+function toggleMenuOpacity() {
+  var mainNavHolder = document.querySelector('.main-nav-holder');
+  var menuOverlay = document.querySelector('.menu-overlay');
+  
+  if (mainNavHolder.style.opacity === '0') {
+    mainNavHolder.style.opacity = '1';
+    menuOverlay.style.opacity = '1';
+  } else {
+    mainNavHolder.style.opacity = '0';
+    menuOverlay.style.opacity = '0';
+  }
+}
+
+</script>
+
+</body>
+</html>
